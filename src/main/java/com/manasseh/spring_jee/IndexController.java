@@ -8,8 +8,12 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class IndexController {
 
+    @RequestMapping("/homepage")
+    public ModelAndView homePage() {
+        return new ModelAndView("index");
+    }
     @RequestMapping("/")
-    public ModelAndView firstPage() {
+    public ModelAndView indexPage() {
         return new ModelAndView("index");
     }
 }
